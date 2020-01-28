@@ -2,7 +2,7 @@
   export let lecture;
 </script>
 
-<div class="col-md-4">
+<div class="col-sm-6 col-md-4">
   <div class="card padding">
     <img
       src="/img/small/{lecture.short}.jpg"

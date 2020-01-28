@@ -1,4 +1,5 @@
 <script>
+  export let base;
   export let segment;
 </script>
 
@@ -17,17 +18,35 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item {segment === 'lectures' ? 'active' : ''}">
-          <a class="nav-link" rel="prefetch" href="lectures">Vorlesungen</a>
-        </li>
-        <li class="nav-item {segment === 'devbox' ? 'active' : ''}">
-          <a class="nav-link" href="devbox">DevBox VM</a>
+        <li class="nav-item {segment === 'lectures' ? 'active' : ''} dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            data-toggle="dropdown"
+            href="/lectures"
+            role="button"
+            aria-haspopup="true"
+            aria-expanded="false">
+            Lehrveranstaltungen
+          </a>
+          <div class="dropdown-menu">
+            {#each base.allLectures as lecture}
+              <a class="dropdown-item" href="/lectures/{lecture.short}">
+                {lecture.long}
+              </a>
+            {/each}
+          </div>
         </li>
         <li class="nav-item {segment === 'exercises' ? 'active' : ''}">
-          <a class="nav-link" href="exercises">Praktikumsabgaben</a>
+          <a class="nav-link" href="/exercises">Praktikumsabgaben</a>
+        </li>
+        <li class="nav-item {segment === 'devbox' ? 'active' : ''}">
+          <a class="nav-link" href="/devbox">DevBox VM</a>
+        </li>
+        <li class="nav-item {segment === 'theses' ? 'active' : ''}">
+          <a class="nav-link" href="/theses">Abschlussarbeiten</a>
         </li>
         <li class="nav-item {segment === 'about' ? 'active' : ''}">
-          <a class="nav-link" href="about">Prof. Dr. Oliver Braun</a>
+          <a class="nav-link" href="/about">Prof. Dr. Oliver Braun</a>
         </li>
       </ul>
     </div>

@@ -55,8 +55,7 @@ const lectureToEvent = (lect, lectureStarttime, lectureEndtime, lecture) => {
     title: `VL ${lecture.short}: ${lect.topic}`,
     start: dateArr.concat(lectureStarttime),
     end: dateArr.concat(lectureEndtime),
-    location:
-      lect.room === undefined ? lecture.maincontent.lecture.room : lect.room
+    location: lect.room === undefined ? lecture.lecture.room : lect.room
   };
 };
 
@@ -105,9 +104,9 @@ const labToEvent = (
 };
 
 const mkIcsObjs = lecture => {
-  const lectures = lecture.maincontent.lecture.lectures;
-  const lectureStarttime = mkStarttime(lecture.maincontent.lecture.daytime);
-  const lectureEndtime = mkEndtime(lecture.maincontent.lecture.daytime);
+  const lectures = lecture.lecture.lectures;
+  const lectureStarttime = mkStarttime(lecture.lecture.daytime);
+  const lectureEndtime = mkEndtime(lecture.lecture.daytime);
   let icsObjs = [];
   for (let lectIdx in lectures) {
     const lect = lectures[lectIdx];
@@ -117,12 +116,12 @@ const mkIcsObjs = lecture => {
       );
     }
   }
-  const labs = lecture.maincontent.lab.labs;
-  const labdaytimes = lecture.maincontent.lab.groups.map(g => g.daytime);
+  const labs = lecture.lab.labs;
+  const labdaytimes = lecture.lab.groups.map(g => g.daytime);
   const labStarttimes = mkStarttimes(labdaytimes);
   const labEndtimes = mkEndtimes(labdaytimes);
-  const labRooms = lecture.maincontent.lab.groups.map(g => g.room);
-  const labNames = lecture.maincontent.lab.groups.map(g => g.name);
+  const labRooms = lecture.lab.groups.map(g => g.room);
+  const labNames = lecture.lab.groups.map(g => g.name);
   for (let labIdx in labs) {
     const lab = labs[labIdx];
     if (!lab.cancelled) {

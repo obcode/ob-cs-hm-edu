@@ -13,51 +13,71 @@
 
 <script>
   export let lecture;
+
+  import Lecture from "../../components/lecture/Lecture.svelte";
+  import Lab from "../../components/lecture/Lab.svelte";
+  import Slides from "../../components/lecture/Slides.svelte";
+  import Exercises from "../../components/lecture/Exercises.svelte";
+  import Nav from "../../components/lecture/Nav.svelte";
 </script>
 
 <style>
-  /*
-		By default, CSS is locally scoped to the component,
-		and any unused styles are dead-code-eliminated.
-		In this page, Svelte can't know which elements are
-		going to appear inside the {{{post.html}}} block,
-		so we have to use the :global(...) modifier to target
-		all elements inside .content
-	*/
-  .content :global(h2) {
-    font-size: 1.4em;
-    font-weight: 500;
-  }
 
-  .content :global(pre) {
-    background-color: #f9f9f9;
-    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.05);
-    padding: 0.5em;
-    border-radius: 2px;
-    overflow-x: auto;
-  }
-
-  .content :global(pre) :global(code) {
-    background-color: transparent;
-    padding: 0;
-  }
-
-  .content :global(ul) {
-    line-height: 1.5;
-  }
-
-  .content :global(li) {
-    margin: 0 0 0.5em 0;
-  }
 </style>
 
 <svelte:head>
   <title>{lecture.long}</title>
 </svelte:head>
 
-<h1>{lecture.long}</h1>
-<h5>Stand: {lecture.last}</h5>
-
-<div class="content">
-  <img class="img-fluid" src={`/img/${lecture.short}.jpg`} alt={lecture.long} />
+<div class="container-fluid">
+  <div class="row jumbotron">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-8">
+      <h1 class="display-6">{lecture.long}</h1>
+      <p class="lead">Stand: {lecture.last}</p>
+      {#if lecture.dates}
+        {#each lecture.dates as date}
+          <div class="alert alert-warning" role="alert">
+            {date.date}, {date.time}: {date.title}
+          </div>
+        {/each}
+      {/if}
+    </div>
+    <div class="d-none d-md-block col-md-6 col-lg-4">
+      <img
+        class="img-fluid"
+        src={`/img/small/${lecture.short}.jpg`}
+        alt={lecture.long} />
+    </div>
+  </div>
 </div>
+
+<Nav {lecture} />
+
+{#if lecture.lecture}
+  <div class="container-fluid padding">
+    <div class="row padding">
+      <div class="col-xs-12 col-sm-12 col-md-6 py-2">
+        <Lecture lecture={lecture.lecture} />
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-6 py-2">
+        <Lab lab={lecture.lab} />
+      </div>
+    </div>
+  </div>
+
+  <hr />
+{/if}
+
+{#if lecture.slides}
+  <div id="slides">
+    <Slides {lecture} />
+  </div>
+{/if}
+
+<hr />
+
+{#if lecture.exercises}
+  <div id="exercises">
+    <Exercises {lecture} />
+  </div>
+{/if}
