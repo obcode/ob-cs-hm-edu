@@ -1,6 +1,7 @@
 <script>
   export let base;
   export let segment;
+  const currentLectureShorts = base.currentSemester.lectures.map(l => l.short);
 </script>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
@@ -30,8 +31,13 @@
           </a>
           <div class="dropdown-menu">
             {#each base.allLectures as lecture}
-              <a class="dropdown-item" href="/lectures/{lecture.short}">
+              <a
+                class="dropdown-item {currentLectureShorts.includes(lecture.short) ? 'text-success' : ''}"
+                href="/lectures/{lecture.short}">
                 {lecture.long}
+                {#if currentLectureShorts.includes(lecture.short)}
+                  ({base.currentSemester.short})
+                {/if}
               </a>
             {/each}
           </div>

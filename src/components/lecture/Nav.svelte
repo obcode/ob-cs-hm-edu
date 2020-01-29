@@ -63,7 +63,7 @@
         role="button"
         aria-haspopup="true"
         aria-expanded="false">
-        <ion-icon name="cloud-download" />
+        <ion-icon name="download" />
         Slides
       </a>
       <div class="dropdown-menu">
@@ -85,7 +85,7 @@
         role="button"
         aria-haspopup="true"
         aria-expanded="false">
-        <ion-icon name="cloud-download" />
+        <ion-icon name="download" />
         Handouts
       </a>
       <div class="dropdown-menu">
@@ -109,7 +109,7 @@
         role="button"
         aria-haspopup="true"
         aria-expanded="false">
-        <ion-icon name="cloud-download" />
+        <ion-icon name="download" />
         Aufgabenblätter
       </a>
       <div class="dropdown-menu">
@@ -133,7 +133,7 @@
         role="button"
         aria-haspopup="true"
         aria-expanded="false">
-        <ion-icon name="cloud-download" />
+        <ion-icon name="download" />
         Klausuren
       </a>
       <div class="dropdown-menu">
@@ -148,39 +148,6 @@
     </li>
   {/if}
 
-  <li class="nav-item dropdown">
-    <a
-      class="nav-link dropdown-toggle"
-      data-toggle="dropdown"
-      href="/"
-      role="button"
-      aria-haspopup="true"
-      aria-expanded="false">
-      <ion-icon name="cloud-download" />
-      Downloads
-    </a>
-    <div class="dropdown-menu">
-      {#if lecture.lecture}
-        <a class="dropdown-item" href="/ics/{lecture.short}.ics">
-          Alle Termine als ics
-        </a>
-      {/if}
-      {#if lecture.lecture || lecture.slides || lecture.handouts || lecture.exercises || lecture.exams}
-        <a
-          class="dropdown-item"
-          href="/lectures/{lecture.short}/{lecture.short}.zip"
-          type="application/zip">
-          Alle PDFs als zip-File
-        </a>
-      {/if}
-      <a
-        class="dropdown-item"
-        href="/lectures/{lecture.short}.json"
-        type="application/zip">
-        Alle Infos als JSON-Objekt
-      </a>
-    </div>
-  </li>
 </ul>
 
 {#if lecture.objectives}

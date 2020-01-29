@@ -41,6 +41,38 @@
           </div>
         {/each}
       {/if}
+      <div class="container-fluid padding">
+        <div class="row">
+          {#if lecture.lecture}
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-4 py-1">
+              <a class="btn btn-info" href="/ics/{lecture.short}.ics">
+                <ion-icon name="calendar" />
+                Termine (ics)
+              </a>
+            </div>
+          {/if}
+          {#if lecture.lecture || lecture.slides || lecture.handouts || lecture.exercises || lecture.exams}
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-4 py-1">
+              <a
+                class="btn btn-info"
+                href="/lectures/{lecture.short}/{lecture.short}.zip"
+                type="application/zip">
+                <ion-icon name="download" />
+                Alle PDFs (zip)
+              </a>
+            </div>
+          {/if}
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-4 py-1">
+            <a
+              class="btn btn-info"
+              href="/lectures/{lecture.short}.json"
+              type="application/zip">
+              <ion-icon name="download" />
+              Alle Infos (JSON)
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="d-none d-md-block col-md-6 col-lg-4">
       <img
