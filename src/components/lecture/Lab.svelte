@@ -31,7 +31,7 @@
           <span class="padding">
             {#each l.dates as d, i}
               <span
-                class="badge mx-1 {l.cancelled ? 'badge-danger' : 'badge-success'}">
+                class="badge mx-1 {l.cancelled || d.cancelled ? 'badge-danger' : 'badge-success'}">
                 {d.date}
               </span>
             {/each}
