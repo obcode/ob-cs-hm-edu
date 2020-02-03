@@ -1,3 +1,7 @@
+<svelte:head>
+  <title>ob.cs.hm.edu | Abgaben</title>
+</svelte:head>
+
 <div class="container-fluid">
   <div class="row jumbotron">
     <div class="col-12">
