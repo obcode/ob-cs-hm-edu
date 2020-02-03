@@ -4,7 +4,6 @@ import commonjs from "rollup-plugin-commonjs";
 import svelte from "rollup-plugin-svelte";
 import babel from "rollup-plugin-babel";
 import { terser } from "rollup-plugin-terser";
-import copy from "rollup-plugin-copy";
 import config from "sapper/config/rollup.js";
 import pkg from "./package.json";
 
@@ -62,18 +61,6 @@ export default {
             ]
           ]
         }),
-
-      copy({
-        targets: [
-          {
-            src: [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css.map"
-            ],
-            dest: "static"
-          }
-        ]
-      }),
 
       !dev &&
         terser({
