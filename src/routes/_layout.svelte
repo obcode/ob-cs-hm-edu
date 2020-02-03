@@ -16,9 +16,16 @@
   export let segment;
 </script>
 
+<style>
+  main {
+    padding-bottom: 50px;
+  }
+</style>
+
 <Nav {segment} {base} />
 
 <main>
   <slot />
-  <Footer />
 </main>
+
+<Footer />
