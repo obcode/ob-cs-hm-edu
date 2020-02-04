@@ -1,5 +1,5 @@
 <svelte:head>
-  <title>Datenschutzerklärung</title>
+  <title>ob | Datenschutzerklärung</title>
 </svelte:head>
 
 <div class="container-fluid">

@@ -26,7 +26,7 @@
 </style>
 
 <svelte:head>
-  <title>Lehrveranstaltungen</title>
+  <title>ob | Lehrveranstaltungen</title>
 </svelte:head>
 
 <div class="container-fluid padding">

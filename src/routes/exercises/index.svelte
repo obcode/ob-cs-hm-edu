@@ -1,5 +1,5 @@
 <svelte:head>
-  <title>ob.cs.hm.edu | Abgaben</title>
+  <title>ob | Abgaben</title>
 </svelte:head>
 
 <div class="container-fluid">

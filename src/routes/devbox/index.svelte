@@ -1,5 +1,5 @@
 <svelte:head>
-  <title>ob.cs.hm.edu | DevBox</title>
+  <title>ob | DevBox</title>
 </svelte:head>
 
 <div class="container-fluid">

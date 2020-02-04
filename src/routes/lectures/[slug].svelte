@@ -26,7 +26,7 @@
 </style>
 
 <svelte:head>
-  <title>{lecture.long}</title>
+  <title>ob | {lecture.long}</title>
 </svelte:head>
 
 <div class="container-fluid">
