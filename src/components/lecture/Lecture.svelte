@@ -1,5 +1,9 @@
 <script>
   export let lecture;
+
+  import { nextLecture } from "../../misc/dateHelper.js";
+
+  $: next = nextLecture(lecture);
 </script>
 
 <style>
@@ -12,6 +16,16 @@
     Vorlesung
   </h4>
   <div class="card-body">
+    {#if next}
+      <div class="alert alert-danger" role="alert">
+        Nächste Vorlesung am {next.date}:
+        {#if next.cancelled}
+          fällt aus.
+        {:else}
+          <span class="font-italic">{next.topic}.</span>
+        {/if}
+      </div>
+    {/if}
     <h6 class="card-subtitle mb-2 text-muted">
       <ion-icon name="clock" />
       {lecture.daytime},
