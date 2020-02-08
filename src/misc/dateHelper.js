@@ -1,5 +1,5 @@
 function makeDate(str) {
-  // assume str == "07.10.19"
+  // assume str == "07.10.2019"
   return new Date(str.replace(/(\d{2})\.(\d{2})\.(\d{4})/, "$3-$2-$1"));
 }
 
@@ -10,7 +10,6 @@ function nextLecture(lecture) {
 
 function nextLabs(lab) {
   if (!lab.labs) return undefined;
-  const today = new Date();
   let labsPerGroup = [];
   for (const i in lab.labs[1].dates) {
     labsPerGroup[i] = lab.labs
@@ -21,7 +20,7 @@ function nextLabs(lab) {
           cancelled: l.cancelled || l.dates[i].cancelled
         };
       })
-      .find(l => makeDate(l.date) >= today);
+      .find(l => makeDate(l.date) >= new Date());
   }
   return labsPerGroup;
 }
