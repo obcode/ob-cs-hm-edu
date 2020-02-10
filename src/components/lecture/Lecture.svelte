@@ -29,7 +29,7 @@
     <h6 class="card-subtitle mb-2 text-muted">
       <ion-icon name="clock" />
       {lecture.daytime},
-      <ion-icon name="globe" />
+      <ion-icon name="pin" />
       {lecture.room}
     </h6>
 

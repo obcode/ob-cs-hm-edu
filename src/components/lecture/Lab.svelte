@@ -33,7 +33,7 @@
         {group.name}:
         <ion-icon name="clock" />
         {group.daytime},
-        <ion-icon name="globe" />
+        <ion-icon name="pin" />
         {group.room}
       </h6>
     {/each}
