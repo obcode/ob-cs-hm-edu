@@ -19,6 +19,33 @@
   import Slides from "../../components/lecture/Slides.svelte";
   import Exercises from "../../components/lecture/Exercises.svelte";
   import Nav from "../../components/lecture/Nav.svelte";
+
+  function daysUntil(str) {
+    const today = new Date().getTime();
+    const date = new Date(
+      str.replace(/(\d{2})\.(\d{2})\.(\d{4})/, "$3-$2-$1")
+    ).getTime();
+    return Math.ceil((date - today) / (1000 * 3600 * 24));
+  }
+
+  function daysUntilStr(difference) {
+    if (difference == 1) return "Morgen!";
+    if (difference == 0) return "Heute!";
+    if (difference > 0) return `noch ${difference} Tage`;
+    if (difference < 0) return "Zeit abgelaufen";
+  }
+
+  function badge(n) {
+    if (n == 0) {
+      return "badge-danger";
+    } else if (n < 0) {
+      return "";
+    } else if (n > 7) {
+      return "badge-success";
+    } else {
+      return "badge-warning";
+    }
+  }
 </script>
 
 <style>
@@ -36,8 +63,13 @@
       <p class="lead">Stand: {lecture.last}</p>
       {#if lecture.dates}
         {#each lecture.dates as date}
-          <div class="alert alert-warning" role="alert">
+          <div
+            class="alert alert-warning d-flex justify-content-between"
+            role="alert">
             {date.date}, {date.time}: {date.title}
+            <span class="badge-pill mx-1 {badge(daysUntil(date.date))}">
+              {daysUntilStr(daysUntil(date.date))}
+            </span>
           </div>
         {/each}
       {/if}
