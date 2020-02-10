@@ -16,14 +16,14 @@ const webtechFK12 = { short: "webtechFK12", long: "Web-Techniken (mit FK 12)" };
 
 const base = {
   currentSemester: {
-    short: "WS 19/20",
-    long: "Wintersemester 2019/20",
-    lectures: [algdati, vss]
-  },
-  nextSemester: {
     short: "SS 20",
     long: "Sommersemester 2020",
     lectures: [algdatii, fun, vss]
+  },
+  nextSemester: {
+    short: "WS 20/21",
+    long: "Wintersemester 2020/21",
+    lectures: [algdati, vss]
   },
   allLectures: [
     algdati,
