@@ -18,7 +18,7 @@ const base = {
   currentSemester: {
     short: "SS 20",
     long: "Sommersemester 2020",
-    lectures: [algdatii, fun, vss]
+    lectures: [algdatii, vss]
   },
   nextSemester: {
     short: "WS 20/21",
