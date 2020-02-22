@@ -39,6 +39,30 @@
     <li class="nav-item">
       <a
         class="nav-link"
+        id="github-tab"
+        data-toggle="tab"
+        href="#github"
+        role="tab"
+        aria-controls="github"
+        aria-selected="true">
+        GitHub
+      </a>
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="ci-tab"
+        data-toggle="tab"
+        href="#ci"
+        role="tab"
+        aria-controls="ci"
+        aria-selected="true">
+        CI/CD
+      </a>
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
         id="git-basics-tab"
         data-toggle="tab"
         href="#git-basics"
@@ -408,6 +432,43 @@
             gibt einen guten Überblick über die git-flow Kommandos.
           </p>
         </div>
+      </div>
+    </div>
+    <div
+      class="tab-pane fade"
+      id="github"
+      role="tabpanel"
+      aria-labelledby="github-tab">
+      <div class="card border-light padding">
+        <div class="card-body">
+          <p>
+            Zur Abgabe nutzen wir GitHub. Sie benötigen dazu einen beliebigen
+            <a href="https://github.com/join">GitHub-Account.</a>
+            Sie können einen bestehenden Account nutzen oder sich einen neuen
+            Account erzeugen. Der Account muss nichts mit der Hochschule München
+            zu tun haben. Wenn Sie datenschutzrechtliche Bedenken haben, wenden
+            Sie sich bitte direkt an mich, damit wir für Sie eine Lösung finden.
+          </p>
+          <p>
+            Die für die Aufgaben verwendeten GitHub-Repositories sind
+            <code>private</code>
+            und können damit auschließlich von Ihnen und von mir (aber natürlich
+            auch von Mitarbeitern der Firma GitHub) gesehen werden.
+          </p>
+          <p>
+            Um Ihnen Ihre GitHub-Projekte zuordnen zu können, muss ich natürlich
+            wissen, wer wer ist. Treten Sie dazu meinem Moodle-Kurs
+            <a href="https://moodle.hm.edu/">TODO</a>
+            bei und füllen Sie die
+            <a href="TODO">Zuordnung GitHub-Account</a>
+            aus.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="ci" role="tabpanel" aria-labelledby="ci-tab">
+      <div class="card border-light padding">
+        <div class="card-body">Drone und GitHub Actions</div>
       </div>
     </div>
     <div
