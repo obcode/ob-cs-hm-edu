@@ -31,7 +31,7 @@
     {#each lab.groups as group}
       <h6 class="card-subtitle mb-2 text-muted">
         {group.name}:
-        <ion-icon name="clock" />
+        <ion-icon name="alarm-outline" />
         {group.daytime},
         <ion-icon name="pin" />
         {group.room}

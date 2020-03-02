@@ -27,7 +27,7 @@
       </div>
     {/if}
     <h6 class="card-subtitle mb-2 text-muted">
-      <ion-icon name="clock" />
+      <ion-icon name="alarm-outline" />
       {lecture.daytime},
       <ion-icon name="pin" />
       {lecture.room}
