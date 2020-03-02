@@ -54,7 +54,7 @@
     </li>
   {/if}
 
-  {#if lecture.slides}
+  {#if lecture.slides && lecture.slides.length > 0}
     <li class="nav-item dropdown">
       <a
         class="nav-link dropdown-toggle"
@@ -100,7 +100,7 @@
     </li>
   {/if}
 
-  {#if lecture.exercises}
+  {#if lecture.exercises && lecture.exercises.length > 0}
     <li class="nav-item dropdown">
       <a
         class="nav-link dropdown-toggle"
