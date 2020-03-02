@@ -79,7 +79,7 @@
             {#if lecture.lecture}
               <!-- <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-4 py-1"> -->
               <a class="btn btn-info" href="/ics/{lecture.short}.ics">
-                <ion-icon name="calendar" />
+                <ion-icon name="calendar-outline" />
                 Termine (ics)
               </a>
               <!-- </div> -->
@@ -90,14 +90,14 @@
                 class="btn btn-info"
                 href="/lectures/{lecture.short}/{lecture.short}.zip"
                 type="application/zip">
-                <ion-icon name="download" />
+                <ion-icon name="cloud-download-outline" />
                 Alle PDFs (zip)
               </a>
               <!-- </div> -->
             {/if}
             <!-- <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-4 py-1"> -->
             <a class="btn btn-info" href="/lectures/{lecture.short}.json">
-              <ion-icon name="download" />
+              <ion-icon name="cloud-download-outline" />
               Alle Infos (JSON)
             </a>
             <!-- </div> -->

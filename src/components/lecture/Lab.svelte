@@ -12,7 +12,7 @@
 
 <div class="card border-dark">
   <h4 class="card-header">
-    <ion-icon name="laptop" />
+    <ion-icon name="laptop-outline" />
     Praktikum
   </h4>
   <div class="card-body">
@@ -33,7 +33,7 @@
         {group.name}:
         <ion-icon name="alarm-outline" />
         {group.daytime},
-        <ion-icon name="pin" />
+        <ion-icon name="pin-outline" />
         {group.room}
       </h6>
     {/each}
@@ -47,7 +47,8 @@
           <span class="padding">
             {#each l.dates as d, i}
               <span
-                class="badge mx-1 {l.cancelled || d.cancelled ? 'badge-danger' : 'badge-success'}">
+                class="badge mx-1 {l.cancelled || d.cancelled ? 'badge-danger' : 'badge-success'}
+                text-monospace font-weight-light">
                 {d.date}
               </span>
             {/each}

@@ -12,7 +12,7 @@
 
 <div class="card border-dark">
   <h4 class="card-header" id="lectureHeading">
-    <ion-icon name="book" />
+    <ion-icon name="book-outline" />
     Vorlesung
   </h4>
   <div class="card-body">
@@ -29,7 +29,7 @@
     <h6 class="card-subtitle mb-2 text-muted">
       <ion-icon name="alarm-outline" />
       {lecture.daytime},
-      <ion-icon name="pin" />
+      <ion-icon name="pin-outline" />
       {lecture.room}
     </h6>
 
@@ -39,7 +39,9 @@
           class="list-group-item {l.cancelled ? 'disabled' : ''} d-flex
           justify-content-between align-items-center">
           {l.topic}
-          <span class="badge {l.cancelled ? 'badge-danger' : 'badge-success'}">
+          <span
+            class="badge {l.cancelled ? 'badge-danger' : 'badge-success'}
+            text-monospace font-weight-light">
             {l.date}
           </span>
         </li>

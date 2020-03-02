@@ -43,7 +43,7 @@
         role="button"
         aria-haspopup="true"
         aria-expanded="false">
-        <ion-icon name="link" />
+        <ion-icon name="link-outline" />
         Links
       </a>
       <div class="dropdown-menu">
@@ -63,7 +63,7 @@
         role="button"
         aria-haspopup="true"
         aria-expanded="false">
-        <ion-icon name="download" />
+        <ion-icon name="cloud-download-outline" />
         Slides
       </a>
       <div class="dropdown-menu">
@@ -85,7 +85,7 @@
         role="button"
         aria-haspopup="true"
         aria-expanded="false">
-        <ion-icon name="download" />
+        <ion-icon name="cloud-download-outline" />
         Handouts
       </a>
       <div class="dropdown-menu">
@@ -109,7 +109,7 @@
         role="button"
         aria-haspopup="true"
         aria-expanded="false">
-        <ion-icon name="download" />
+        <ion-icon name="cloud-download-outline" />
         Aufgabenblätter
       </a>
       <div class="dropdown-menu">
@@ -133,7 +133,7 @@
         role="button"
         aria-haspopup="true"
         aria-expanded="false">
-        <ion-icon name="download" />
+        <ion-icon name="cloud-download-outline" />
         Klausuren
       </a>
       <div class="dropdown-menu">

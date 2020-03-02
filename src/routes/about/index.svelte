@@ -21,7 +21,7 @@
     <div class="col-lg-6">
       <div class="row">
         <div class="col-md-2">
-          <ion-icon class="ion-icon-large" name="home" />
+          <ion-icon class="ion-icon-large" name="home-outline" />
         </div>
         <div class="col-md-10">
           <p>
@@ -41,7 +41,7 @@
       <div class="space-30" />
       <div class="row">
         <div class="col-md-2">
-          <ion-icon class="ion-icon-large" name="mail" />
+          <ion-icon class="ion-icon-large" name="mail-outline" />
         </div>
         <div class="col-md-10">
           <p>
@@ -61,7 +61,7 @@
       <div class="space-30" />
       <div class="row">
         <div class="col-md-2">
-          <ion-icon class="ion-icon-large" name="call" />
+          <ion-icon class="ion-icon-large" name="call-outline" />
         </div>
         <div class="col-md-10">
           <p>
@@ -78,7 +78,7 @@
       <div class="space-30" />
       <div class="row">
         <div class="col-md-2">
-          <ion-icon class="ion-icon-large" name="clipboard" />
+          <ion-icon class="ion-icon-large" name="clipboard-outline" />
         </div>
         <div class="col-md-10">
           <p>
