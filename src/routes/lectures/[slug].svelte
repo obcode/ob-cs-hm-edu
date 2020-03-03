@@ -139,7 +139,7 @@
 
 <hr />
 
-{#if lecture.exercises && lecture.slides.length > 0}
+{#if lecture.exercises && lecture.exercises.length > 0}
   <div id="exercises">
     <Exercises {lecture} />
   </div>
