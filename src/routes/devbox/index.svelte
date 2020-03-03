@@ -115,7 +115,7 @@
                 <li>
                   <a
                     href="https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker">
-                    Docker for VIsual Studio Code
+                    Docker for Visual Studio Code
                   </a>
                 </li>
                 <li>
