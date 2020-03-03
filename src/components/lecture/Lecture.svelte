@@ -16,6 +16,12 @@
     Vorlesung
   </h4>
   <div class="card-body">
+    <h6 class="card-subtitle mb-2 text-muted">
+      <ion-icon name="alarm-outline" />
+      {lecture.daytime},
+      <ion-icon name="pin-outline" />
+      {lecture.room}
+    </h6>
     {#if next}
       <div class="alert alert-danger" role="alert">
         Nächste Vorlesung am {next.date}:
@@ -26,12 +32,8 @@
         {/if}
       </div>
     {/if}
-    <h6 class="card-subtitle mb-2 text-muted">
-      <ion-icon name="alarm-outline" />
-      {lecture.daytime},
-      <ion-icon name="pin-outline" />
-      {lecture.room}
-    </h6>
+
+    <hr />
 
     <ul class="list-group list-group-flush">
       {#each lecture.lectures as l}

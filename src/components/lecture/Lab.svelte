@@ -16,19 +16,7 @@
     Praktikum
   </h4>
   <div class="card-body">
-    {#if next[0]}
-      {#each next as lab}
-        <div class="alert alert-danger" role="alert">
-          Nächstes Praktikum am {lab.date}:
-          {#if lab.cancelled}
-            fällt aus.
-          {:else}
-            <span class="font-italic">{lab.topic}.</span>
-          {/if}
-        </div>
-      {/each}
-    {/if}
-    {#each lab.groups as group}
+    {#each lab.groups as group, index}
       <h6 class="card-subtitle mb-2 text-muted">
         {group.name}:
         <ion-icon name="alarm-outline" />
@@ -36,7 +24,21 @@
         <ion-icon name="pin-outline" />
         {group.room}
       </h6>
+      {#if next[0]}
+        <!-- {#each next as lab} -->
+        <div class="alert alert-danger" role="alert">
+          Nächstes Praktikum am {next[index].date}:
+          {#if next[index].cancelled}
+            fällt aus.
+          {:else}
+            <span class="font-italic">{next[index].topic}.</span>
+          {/if}
+        </div>
+        <!-- {/each} -->
+      {/if}
     {/each}
+
+    <hr />
 
     <ul class="list-group list-group-flush">
       {#each lab.labs as l}
