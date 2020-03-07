@@ -78,7 +78,13 @@
           <div class="btn-group" role="group" aria-label="Downloads">
             {#if lecture.lecture}
               <!-- <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-4 py-1"> -->
-              <a class="btn btn-info" href="/ics/{lecture.short}.ics">
+              <a
+                class="btn btn-info"
+                href="/ics/{lecture.short}.ics"
+                data-toggle="tooltip"
+                data-placement="bottom"
+                title="Per URL in Ihren Kalender importieren um auf dem
+                Laufenden zu bleiben.">
                 <ion-icon name="calendar-outline" />
                 Termine (ics)
               </a>
@@ -90,14 +96,14 @@
                 class="btn btn-info"
                 href="/lectures/{lecture.short}/{lecture.short}.zip"
                 type="application/zip">
-                <ion-icon name="cloud-download-outline" />
+                <ion-icon name="archive-outline" />
                 Alle PDFs (zip)
               </a>
               <!-- </div> -->
             {/if}
             <!-- <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-4 py-1"> -->
             <a class="btn btn-info" href="/lectures/{lecture.short}.json">
-              <ion-icon name="cloud-download-outline" />
+              <ion-icon name="information-circle-outline" />
               Alle Infos (JSON)
             </a>
             <!-- </div> -->

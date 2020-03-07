@@ -78,7 +78,7 @@
       <div class="space-30" />
       <div class="row">
         <div class="col-md-2">
-          <ion-icon class="ion-icon-large" name="clipboard-outline" />
+          <ion-icon class="ion-icon-large" name="chatbubbles-outline" />
         </div>
         <div class="col-md-10">
           <p>

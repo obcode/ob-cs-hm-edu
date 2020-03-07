@@ -14,6 +14,7 @@
         role="button"
         aria-controls="objectives"
         aria-selected="false">
+        <ion-icon name="checkmark-circle-outline" />
         Ziele &amp; Inhalte
       </a>
     </li>
@@ -29,6 +30,7 @@
         role="button"
         aria-controls="examinfo"
         aria-selected="false">
+        <ion-icon name="hourglass-outline" />
         Prüfung
       </a>
     </li>

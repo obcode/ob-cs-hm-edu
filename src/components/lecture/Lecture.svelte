@@ -12,14 +12,14 @@
 
 <div class="card border-dark">
   <h4 class="card-header" id="lectureHeading">
-    <ion-icon name="book-outline" />
+    <ion-icon name="easel-outline" />
     Vorlesung
   </h4>
   <div class="card-body">
     <h6 class="card-subtitle mb-2 text-muted">
       <ion-icon name="alarm-outline" />
       {lecture.daytime},
-      <ion-icon name="pin-outline" />
+      <ion-icon name="location-outline" />
       {lecture.room}
     </h6>
     {#if next}

@@ -21,7 +21,7 @@
         {group.name}:
         <ion-icon name="alarm-outline" />
         {group.daytime},
-        <ion-icon name="pin-outline" />
+        <ion-icon name="location-outline" />
         {group.room}
       </h6>
       {#if next[0]}
