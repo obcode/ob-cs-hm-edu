@@ -19,6 +19,8 @@
   import Slides from "../../components/lecture/Slides.svelte";
   import Exercises from "../../components/lecture/Exercises.svelte";
   import Nav from "../../components/lecture/Nav.svelte";
+  import { stores } from "@sapper/app";
+  const { session } = stores();
 
   function daysUntil(str) {
     const today = new Date().getTime();
@@ -61,7 +63,7 @@
     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-8">
       <h1 class="display-6">{lecture.long}</h1>
       <p class="lead">Stand: {lecture.last}</p>
-      {#if lecture.dates}
+      {#if lecture.last === $session.currentSemester && lecture.dates}
         {#each lecture.dates as date}
           <div
             class="alert alert-warning d-flex justify-content-between"
@@ -122,7 +124,7 @@
 
 <Nav {lecture} />
 
-{#if lecture.lecture}
+{#if lecture.last === $session.currentSemester && lecture.lecture}
   <div class="container-fluid padding">
     <div class="row padding">
       <div class="col-xs-12 col-sm-12 col-md-6 py-2">
@@ -133,10 +135,9 @@
       </div>
     </div>
   </div>
-
-  <hr />
 {/if}
 
+<!-- 
 {#if lecture.slides && lecture.slides.length > 0}
   <div id="slides">
     <Slides {lecture} />
@@ -149,4 +150,4 @@
   <div id="exercises">
     <Exercises {lecture} />
   </div>
-{/if}
+{/if} -->
