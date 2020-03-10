@@ -1,5 +1,8 @@
 <script>
   export let lecture;
+
+  import { stores } from "@sapper/app";
+  const { session } = stores();
 </script>
 
 <ul class="nav py-3">
@@ -71,9 +74,15 @@
       <div class="dropdown-menu">
         {#each lecture.slides as slide}
           <a
-            class="dropdown-item"
+            class="dropdown-item d-flex justify-content-between
+            align-items-center"
             href="/lectures/{lecture.short}/slides/{slide.filename}.pdf">
             {slide.title}
+            {#if lecture.last === $session.currentSemester}
+              <span class="badge text-monospace font-weight-light">
+                (Letzte Änderung: {slide['last modified']})
+              </span>
+            {/if}
           </a>
         {/each}
       </div>
@@ -93,9 +102,15 @@
       <div class="dropdown-menu">
         {#each lecture.slides as slide}
           <a
-            class="dropdown-item"
+            class="dropdown-item d-flex justify-content-between
+            align-items-center"
             href="/lectures/{lecture.short}/handouts/{slide.filename}.pdf">
             {slide.title}
+            {#if lecture.last === $session.currentSemester}
+              <span class="badge text-monospace font-weight-light">
+                (Letzte Änderung: {slide['last modified']})
+              </span>
+            {/if}
           </a>
         {/each}
       </div>
@@ -117,9 +132,15 @@
       <div class="dropdown-menu">
         {#each lecture.exercises as exercise}
           <a
-            class="dropdown-item"
+            class="dropdown-item d-flex justify-content-between
+            align-items-center"
             href="/lectures/{lecture.short}/exercises/{exercise.filename}.pdf">
             {exercise.title}
+            {#if lecture.last === $session.currentSemester}
+              <span class="badge text-monospace font-weight-light">
+                (Letzte Änderung: {exercise['last modified']})
+              </span>
+            {/if}
           </a>
         {/each}
       </div>

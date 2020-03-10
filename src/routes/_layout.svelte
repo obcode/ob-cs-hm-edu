@@ -9,11 +9,18 @@
 </script>
 
 <script>
+  import { stores } from "@sapper/app";
+  const { session } = stores();
+
   import Nav from "../components/Nav.svelte";
   import Footer from "../components/Footer.svelte";
 
   export let base;
   export let segment;
+
+  session.set({});
+  const currentSemester = base.currentSemester.long;
+  $session = { currentSemester };
 </script>
 
 <style>
