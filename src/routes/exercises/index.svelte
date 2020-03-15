@@ -459,15 +459,8 @@
           </p>
           <p>
             Um Ihnen Ihre GitHub-Projekte zuordnen zu können, muss ich natürlich
-            wissen, wer wer ist. Treten Sie dazu meinem Moodle-Kurs
-            <a href="https://moodle.hm.edu/course/view.php?id=12314">
-              Lehrveranstaltungen (Oliver Braun, FK07)
-            </a>
-            bei und füllen Sie die
-            <a href="https://moodle.hm.edu/mod/feedback/view.php?id=416330">
-              Zuordnung GitHub-Account
-            </a>
-            aus.
+            wissen, wer wer ist. Dazu finden Sie im Moodle-Kurs zur
+            Veranstaltung eine Abfrage.
           </p>
         </div>
       </div>
