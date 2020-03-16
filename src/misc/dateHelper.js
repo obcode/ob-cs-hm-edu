@@ -3,14 +3,22 @@ function makeDate(str) {
   return new Date(str.replace(/(\d{2})\.(\d{2})\.(\d{4})/, "$3-$2-$1"));
 }
 
+function today() {
+  let d = new Date();
+  d.setHours(0, 0, 0, 0);
+  return d;
+}
+
 function nextLecture(lecture) {
   if (!lecture.lectures) return undefined;
-  return lecture.lectures.find(l => makeDate(l.date) >= new Date());
+  const t = today();
+  return lecture.lectures.find(l => makeDate(l.date) >= t);
 }
 
 function nextLabs(lab) {
   if (!lab.labs) return undefined;
   let labsPerGroup = [];
+  const t = today();
   for (const i in lab.labs[1].dates) {
     labsPerGroup[i] = lab.labs
       .map(l => {
@@ -20,7 +28,7 @@ function nextLabs(lab) {
           cancelled: l.cancelled || l.dates[i].cancelled
         };
       })
-      .find(l => makeDate(l.date) >= new Date());
+      .find(l => makeDate(l.date) >= t);
   }
   return labsPerGroup;
 }
