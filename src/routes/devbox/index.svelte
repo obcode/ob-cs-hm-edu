@@ -39,6 +39,13 @@
         Windows 7. Daher macht es Sinn zumindest für den Docker-Teil (m)eine VM
         zu nutzen.
       </p>
+      <p>
+        Der in der DevBox angelegte Nutzer heisst
+        <code>devuser</code>
+        und hat als Passwort
+        <code>devuser</code>
+        .
+      </p>
     </div>
   </div>
 </div>
