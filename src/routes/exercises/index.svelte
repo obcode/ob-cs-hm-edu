@@ -634,11 +634,11 @@
             Durch die Zuweisung werden wir per E-Mail informiert und können,
             schnellstmöglich, auf Ihre Frage reagieren.
           </p>
-          <h3>Gitter</h3>
+          <h3>Mattermost</h3>
           <p>
             Zur Kommunikation bezüglich einer Lehrveranstaltung von mir gibt es
             jeweils einen
-            <a href="https://gitter.im/">Gitter</a>
+            <a href="https://mattermost.com/">Mattermost</a>
             -Room. Sie finden ihn auf der Seite zur Veranstaltung unter
             <em>Links</em>
             .
@@ -647,8 +647,7 @@
             Stellen Sie in diesem Raum inbesondere alle Fragen, die nicht nur
             Sie interessieren könnten. Wer weiter helfen kann, darf gerne weiter
             helfen. Mich selbst finden Sie in den Räumen jeweils unter dem Namen
-            <a href="https://gitter.im/obcode">obcode</a>
-            .
+            obcode.
           </p>
           <p>
             Nutzen Sie auch in Gitter die Möglichkeit Ihre Nachricht in
