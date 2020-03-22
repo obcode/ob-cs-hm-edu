@@ -4,6 +4,17 @@
   import { nextLecture } from "../../misc/dateHelper.js";
 
   $: next = nextLecture(lecture);
+
+  function inThePast(day) {
+    const date = new Date(day.replace(/(\d{2})\.(\d{2})\.(\d{4})/, "$3-$2-$1"));
+    return new Date() > date;
+  }
+
+  function badge(l) {
+    if (inThePast(l.date)) return "";
+    if (l.cancelled) return "badge-danger";
+    return "badge-success";
+  }
 </script>
 
 <style>
@@ -38,12 +49,10 @@
     <ul class="list-group list-group-flush">
       {#each lecture.lectures as l}
         <li
-          class="list-group-item {l.cancelled ? 'disabled' : ''} d-flex
-          justify-content-between align-items-center">
+          class="list-group-item {l.cancelled || inThePast(l.date) ? 'disabled' : ''}
+          d-flex justify-content-between align-items-center">
           {l.topic}
-          <span
-            class="badge {l.cancelled ? 'badge-danger' : 'badge-success'}
-            text-monospace font-weight-light">
+          <span class="badge {badge(l)} text-monospace font-weight-light">
             {l.date}
           </span>
         </li>

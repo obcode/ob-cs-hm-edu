@@ -4,6 +4,22 @@
   import { nextLabs } from "../../misc/dateHelper.js";
 
   $: next = nextLabs(lab);
+
+  function allInThePast(l) {
+    return l.dates.every(d => inThePast(d.date));
+  }
+
+  function inThePast(day) {
+    const date = new Date(day.replace(/(\d{2})\.(\d{2})\.(\d{4})/, "$3-$2-$1"));
+    return new Date() > date;
+  }
+
+  function badge(l, d) {
+    if (inThePast(d.date)) return "";
+    if (l.cancelled) return "badge-danger";
+    if (d.cancelled) return "badge-danger";
+    return "badge-success";
+  }
 </script>
 
 <style>
@@ -43,14 +59,13 @@
     <ul class="list-group list-group-flush">
       {#each lab.labs as l}
         <li
-          class="list-group-item {l.cancelled ? 'disabled' : ''} d-flex
-          justify-content-between align-items-center">
+          class="list-group-item {l.cancelled || allInThePast(l) ? 'disabled' : ''}
+          d-flex justify-content-between align-items-center">
           {l.topic}
           <span class="padding">
             {#each l.dates as d, i}
               <span
-                class="badge mx-1 {l.cancelled || d.cancelled ? 'badge-danger' : 'badge-success'}
-                text-monospace font-weight-light">
+                class="badge mx-1 {badge(l, d)} text-monospace font-weight-light">
                 {d.date}
               </span>
             {/each}
