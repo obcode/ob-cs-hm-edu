@@ -7,7 +7,6 @@ function makeDate(str, daytime) {
     .split(":");
   const date = new Date(str.replace(/(\d{2})\.(\d{2})\.(\d{4})/, "$3-$2-$1"));
   date.setHours(time[0], time[1]);
-  console.log(date);
   return date;
 }
 
