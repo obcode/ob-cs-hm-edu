@@ -275,8 +275,7 @@
             kopieren (Sie finden es unter
             <code>C:\VB-Images\Braun\DevBox.vdi</code>
             ) oder Sie laden es aus der
-            <a
-              href="https://www.dropbox.com/sh/epekv6g0brjcbdn/AACgnTcbGySXBx015VInxUTLa?dl=0">
+            <a href="https://www.dropbox.com/s/d1meaj0vet0lkpp/DevBox.vdi?dl=1">
               Dropbox
             </a>
             herunter. Erzeugen Sie dann in VirtualBox eine neue Linux-VM (64
