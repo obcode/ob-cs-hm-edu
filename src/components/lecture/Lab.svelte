@@ -11,7 +11,9 @@
 
   function inThePast(day) {
     const date = new Date(day.replace(/(\d{2})\.(\d{2})\.(\d{4})/, "$3-$2-$1"));
-    return new Date() > date;
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    return today > date;
   }
 
   function badge(l, d) {
