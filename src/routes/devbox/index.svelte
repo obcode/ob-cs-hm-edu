@@ -275,10 +275,15 @@
             kopieren (Sie finden es unter
             <code>C:\VB-Images\Braun\DevBox.vdi</code>
             ) oder Sie laden es aus der
-            <a href="https://www.dropbox.com/s/d1meaj0vet0lkpp/DevBox.vdi?dl=1">
+            <a href="https://www.dropbox.com/s/qdpdn09h8jtli6h/DevBox.vdi?dl=1">
               Dropbox
             </a>
-            herunter. Erzeugen Sie dann in VirtualBox eine neue Linux-VM (64
+            herunter (Sie können den Download mit der
+            <a
+              href="https://www.dropbox.com/s/of7rvmrs9gvjisp/DevBox.vdi.sha256?dl=1">
+              SHA256-Prüfsumme
+            </a>
+            überprüfen). Erzeugen Sie dann in VirtualBox eine neue Linux-VM (64
             bit) und nutzen Sie das DevBox-Image als Festplatte.
           </p>
           <div class="alert alert-warning" role="alert">
