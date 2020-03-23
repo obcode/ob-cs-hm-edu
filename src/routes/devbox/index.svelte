@@ -274,21 +274,50 @@
             Sie können das DevBox-Image entweder per USB-Stick vom MWN-PC
             kopieren (Sie finden es unter
             <code>C:\VB-Images\Braun\DevBox.vdi</code>
-            ) oder Sie laden es aus der
-            <a href="https://www.dropbox.com/s/qdpdn09h8jtli6h/DevBox.vdi?dl=1">
-              Dropbox
-            </a>
-            herunter (Sie können den Download mit der
-            <a
-              href="https://www.dropbox.com/s/of7rvmrs9gvjisp/DevBox.vdi.sha256?dl=1">
-              SHA256-Prüfsumme
-            </a>
-            überprüfen). Erzeugen Sie dann in VirtualBox eine neue Linux-VM (64
-            bit) und nutzen Sie das DevBox-Image als Festplatte.
+            ) oder Sie laden es aus der Dropbox herunter:
           </p>
-          <div class="alert alert-warning" role="alert">
-            Achtung beim Herunterladen: Das Image ist mehr als 22 GB groß.
-          </div>
+          <ul>
+            <li>
+              <a
+                href="https://www.dropbox.com/s/qdpdn09h8jtli6h/DevBox.vdi?dl=1">
+                DevBox.vdi
+              </a>
+              (Diskimage, unkomprimiert, ca. 22,22 GB)
+            </li>
+            <li>
+              <a
+                href="https://www.dropbox.com/s/of7rvmrs9gvjisp/DevBox.vdi.sha256?dl=1">
+                SHA256-Prüfsumme für DevBox.vdi
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.dropbox.com/s/jrp3ls6fk4n2t1y/DevBox.vdi.zst?dl=1">
+                DevBox.vdi.zst
+              </a>
+              (Diskimage, komprimiert mit
+              <a href="https://facebook.github.io/zstd/">Zstandard</a>
+              , ca. 6,11 GB)
+            </li>
+            <li>
+              <a
+                href="https://www.dropbox.com/s/j8mivwa56k0feg9/DevBox.vdi.zst.sha256?dl=1">
+                SHA256-Prüfsumme für DevBox.vdi.zst
+              </a>
+            </li>
+          </ul>
+          <p>
+            Nachdem Sie die Datei
+            <code>DevBox.vdi.zst</code>
+            nach
+            <code>DevBox.vdi</code>
+            entpackt haben, muss dafür natürlich auch die SHA256-Prüfsumme für
+            DevBox.vdi passen.
+          </p>
+          <p>
+            Erzeugen Sie dann in VirtualBox eine neue Linux-VM (64 bit) und
+            nutzen Sie das DevBox-Image als Festplatte.
+          </p>
           <p>
             Sie können über das VPN auch Ihr MWN-Home-Verzeichnis mounten, wie
             unter
