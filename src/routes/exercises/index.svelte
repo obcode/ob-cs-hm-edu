@@ -84,6 +84,18 @@
         Kommunikation und Hilfe
       </a>
     </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        id="rating-tab"
+        data-toggle="tab"
+        href="#rating"
+        role="tab"
+        aria-controls="rating"
+        aria-selected="false">
+        Bewertung
+      </a>
+    </li>
   </ul>
   <div class="tab-content" id="myTabContent">
     <div
@@ -118,8 +130,8 @@
             -Branch.
           </p>
           <p>
-            Das Feedback bekommen Sie von meinen Tutoren oder mir als Kommentar
-            zum PR. Wenn
+            Das Feedback bekommen Sie von mir (oder, falls vorhanden, von einem
+            Tutor) als Kommentar zum PR. Wenn
             <strong>ich</strong>
             den PR genehmige, haben Sie die entsprechende Aufgabe
             <strong>erfolgreich</strong>
@@ -376,8 +388,8 @@
             <code>develop</code>
             in den
             <code>master</code>
-            . Sie können entweder den PR direkt erzeugen und mich und den für
-            Sie zuständigen Tutor als
+            . Sie können entweder den PR direkt erzeugen und mich (und, falls
+            vorhanden, den für Sie zuständigen Tutor) als
             <strong>Reviewer</strong>
             eintragen. Dann gibt es wieder Feedback und wenn es ein
             <em>Approval</em>
@@ -610,8 +622,8 @@
           </p>
           <h4>Und jetzt das wichtigste:</h4>
           <p>
-            Damit ich oder ein Tutor überhaupt mit bekommt, dass Sie eine Frage
-            haben, führen Sie folgende Schritte durch:
+            Damit ich (oder, falls vorhanden, ein Tutor) überhaupt mit bekomme,
+            dass Sie eine Frage haben, führen Sie folgende Schritte durch:
           </p>
           <ul>
             <li>
@@ -657,6 +669,63 @@
             zu formatieren. Damit werden insbesondere Code-Schnipsel viel besser
             lesbar.
           </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="tab-pane fade"
+      id="rating"
+      role="tabpanel"
+      aria-labelledby="rating-tab">
+      <div class="card border-light padding">
+        <div class="card-body">
+          <p>
+            Nachdem Sie den Pull Request erzeugt und mich als
+            <strong>Reviewer</strong>
+            eingetragen haben, begutachte ich Ihre Abgabe. Dabei kann es zu drei
+            möglichen Ergebnissen kommen:
+          </p>
+          <ol>
+            <li>
+              <strong>Comment</strong>
+              <p>
+                In diesem Fall haben Sie die Abgabe
+                <strong>nicht</strong>
+                bestanden. Schauen Sie sich die weiteren Kommentare an um etwas
+                zu lernen.
+              </p>
+            </li>
+            <li>
+              <strong>Approved</strong>
+              <p>
+                In diesem Fall haben Sie die Abgabe bestanden. Schauen Sie sich
+                die weiteren Kommentare an um etwas zu lernen. Wenn ich
+                Anmerkungen gemacht habe, ist es sicher hilfreich den Code noch
+                entsprechend zu verbessern. Es ist aber nicht zwingend notwendig
+                und Sie können den Pull Request mergen.
+              </p>
+              <p>
+                Wenn Sie noch Änderungen machen, müssen Sie mir diese nicht mehr
+                vorlegen. Sie können ja nicht mehr als bestehen.
+              </p>
+            </li>
+            <li>
+              <strong>Request changes</strong>
+              <p>
+                In diesem Fall haben Sie noch nicht bestanden, können dies aber
+                noch erreichen.
+              </p>
+              <p>
+                Sie müssen in dem Fall die Stellen, zu denen ich Anmerkungen
+                gemacht habe, so schnell wie möglich noch verbessern. Sobald Sie
+                dies gemacht haben,
+                <strong>müssen</strong>
+                Sie ein erneutes Review von mir einfordern. Dazu klicken Sie
+                hinter meinem Namen in der Liste der Reviewer auf den Button
+                <i>Re-request review.</i>
+              </p>
+            </li>
+          </ol>
         </div>
       </div>
     </div>
