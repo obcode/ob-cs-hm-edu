@@ -10,15 +10,15 @@ export async function get(req, res, next) {
       links: [
         {
           text: "Modulbeschreibung",
-          url: "https://w3-o.cs.hm.edu:8000/public/module/260/"
-        }
+          url: "https://w3-o.cs.hm.edu:8000/public/module/260/",
+        },
       ],
       long: slug === "webtech" ? "Web-Techniken" : "Web-Techniken mit FK12",
-      short: slug
+      short: slug,
     };
 
     res.writeHead(200, {
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",
     });
     res.end(JSON.stringify(basejson));
     return;
@@ -26,30 +26,19 @@ export async function get(req, res, next) {
 
   const prefix = `${lectPath}/${slug}`;
   const webprefix = `${prefix}/web`;
-
-  const b = `${webprefix}/base.json`;
-  const base = await fetch(b);
-
-  const lec = `${webprefix}/lectures.json`;
-  const lectures = await fetch(lec);
-
-  const lab = `${webprefix}/labs.json`;
-  const labs = await fetch(lab);
-
-  const d = `${webprefix}/dates.json`;
-  const dates = await fetch(d);
-
   const metadataprefix = `${prefix}/metadata`;
 
-  const s = `${metadataprefix}/slides.json`;
-  const slides = await fetch(s);
-
-  const e = `${metadataprefix}/exercises.json`;
-  const exercises = await fetch(e);
+  const base = await fetch(`${webprefix}/base.json`);
+  const lectures = await fetch(`${webprefix}/lectures.json`);
+  const labs = await fetch(`${webprefix}/labs.json`);
+  const dates = await fetch(`${webprefix}/dates.json`);
+  const videos = await fetch(`${webprefix}/videos.json`);
+  const slides = await fetch(`${metadataprefix}/slides.json`);
+  const exercises = await fetch(`${metadataprefix}/exercises.json`);
 
   if (base.status == 200) {
     res.writeHead(200, {
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",
     });
     const basejson = await base.json();
 
@@ -63,6 +52,10 @@ export async function get(req, res, next) {
 
     if (dates.status == 200) {
       basejson.dates = await dates.json();
+    }
+
+    if (videos.status == 200) {
+      basejson.videos = await videos.json();
     }
 
     if (slides.status == 200) {
@@ -94,11 +87,11 @@ export async function get(req, res, next) {
     res.end(JSON.stringify(basejson));
   } else {
     res.writeHead(404, {
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",
     });
     res.end(
       JSON.stringify({
-        message: `Not found`
+        message: `Not found`,
       })
     );
   }

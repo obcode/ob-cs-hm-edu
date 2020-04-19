@@ -147,6 +147,36 @@
     </li>
   {/if}
 
+  {#if lecture.videos && lecture.videos.length > 0}
+    <li class="nav-item dropdown">
+      <a
+        class="nav-link dropdown-toggle"
+        data-toggle="dropdown"
+        href="/"
+        role="button"
+        aria-haspopup="true"
+        aria-expanded="false">
+        <ion-icon name="cloud-download-outline" />
+        Videos
+      </a>
+      <div class="dropdown-menu">
+        {#each lecture.videos as video}
+          <a
+            class="dropdown-item d-flex justify-content-between
+            align-items-center"
+            href={video.url}>
+            {video.title}
+            {#if lecture.last === $session.currentSemester}
+              <span class="badge text-monospace font-weight-light">
+                (Letzte Änderung: {video['last modified']})
+              </span>
+            {/if}
+          </a>
+        {/each}
+      </div>
+    </li>
+  {/if}
+
   {#if lecture.exams}
     <li class="nav-item dropdown">
       <a
