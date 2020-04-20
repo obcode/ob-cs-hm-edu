@@ -3,7 +3,7 @@ FROM mhart/alpine-node:latest
 # install dependencies
 WORKDIR /app
 COPY . .
-RUN yarn install && yarn build
+RUN npm install && npm run build
 
 FROM mhart/alpine-node:slim
 
