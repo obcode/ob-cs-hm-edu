@@ -1,7 +1,7 @@
 const algdati = { short: "algdati", long: "Algorithmen und Datenstrukturen I" };
 const algdatii = {
   short: "algdatii",
-  long: "Algorithmen und Datenstrukturen II"
+  long: "Algorithmen und Datenstrukturen II",
 };
 const compiler = { short: "compiler", long: "Compiler" };
 const fun = { short: "fun", long: "Funktionale Programmierung" };
@@ -15,15 +15,15 @@ const webtech = { short: "webtech", long: "Web-Techniken" };
 const webtechFK12 = { short: "webtechFK12", long: "Web-Techniken (mit FK 12)" };
 
 const base = {
-  currentSemester: {
-    short: "SS 20",
-    long: "Sommersemester 2020",
-    lectures: [algdatii, vss]
-  },
   nextSemester: {
+    short: "SS 21",
+    long: "Sommersemester 2021",
+    lectures: [],
+  },
+  currentSemester: {
     short: "WS 20/21",
     long: "Wintersemester 2020/21",
-    lectures: [algdati, vss]
+    lectures: [algdati, vss],
   },
   allLectures: [
     algdati,
@@ -37,13 +37,13 @@ const base = {
     swengiiib,
     vss,
     webtech,
-    webtechFK12
-  ]
+    webtechFK12,
+  ],
 };
 
 export function get(req, res) {
   res.writeHead(200, {
-    "Content-Type": "application/json"
+    "Content-Type": "application/json",
   });
 
   res.end(JSON.stringify(base));
