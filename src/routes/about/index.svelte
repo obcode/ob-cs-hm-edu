@@ -2,6 +2,10 @@
   .ion-icon-large {
     font-size: 64px;
   }
+  .strike {
+    text-decoration: line-through;
+    color: grey;
+  }
 </style>
 
 <svelte:head>
@@ -65,12 +69,14 @@
         </div>
         <div class="col-md-10">
           <p>
-            Gitter:
-            <a href="https://gitter.im/obcode">obcode</a>
+            RocketChat:
+            <a href="https://chat.hm.edu/direct/oliver.braun">@oliver.braun</a>
             <br />
-            Tel. +49 89 1265-3790
+            Tel.
+            <span class="strike">+49 89 1265-3790</span>
+            chat or email me!
             <br />
-            Fax +49 89 1265-3780
+            Fax. of course not, it's {new Date().getFullYear()}
             <br />
           </p>
         </div>
@@ -91,6 +97,9 @@
             <br />
             <ion-icon name="checkmark-circle-outline" />
             nur nach vorheriger Anmeldung per E-Mail
+            <br />
+            <ion-icon name="checkmark-circle-outline" />
+            zur Zeit ausschließlich per Zoom
           </p>
         </div>
       </div>

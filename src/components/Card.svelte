@@ -10,9 +10,9 @@
       alt={lecture.long} />
     <div class="card-body">
       <h5 class="card-title">{lecture.long}</h5>
-      <a href="/lectures/{lecture.short}" class="btn btn-outline-secondary">
+      <!-- <a href="/lectures/{lecture.short}" class="btn btn-outline-secondary">
         mehr Info
-      </a>
+      </a> -->
     </div>
   </div>
 </div>

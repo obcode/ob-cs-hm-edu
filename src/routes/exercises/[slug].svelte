@@ -32,19 +32,20 @@
     <hr />
     <div class="col-12">
       <p class="lead">
-        Alle Abgaben meiner Praktikumsaufgaben erfolgen auf GitHub mit Hilfe von
-        Git.
+        Alle Abgaben meiner Praktikumsaufgaben erfolgen auf
+        <a href="https://gitlab.lrz.de/">GitLab</a>
+        mit Hilfe von Git.
       </p>
-      <hr class="my-4" />
+      <!-- <hr class="my-4" />
       <p>
         Dabei ist mir, neben der Lösung der eigentlichen Aufgabenstellung, sehr
         wichtig, dass Sie nach den hier beschriebenen Schritten vorgehen.
-      </p>
+      </p> -->
     </div>
   </div>
 </div>
 
-<div class="container-fluid">
+<!-- <div class="container-fluid">
   <Nav {slug} />
   {#if slug == 'feedback'}
     <Feedback />
@@ -59,4 +60,4 @@
   {:else if slug == 'rating'}
     <Rating />
   {/if}
-</div>
+</div> -->

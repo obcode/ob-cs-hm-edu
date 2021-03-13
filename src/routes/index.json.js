@@ -5,6 +5,7 @@ const algdatii = {
 };
 const compiler = { short: "compiler", long: "Compiler" };
 const fun = { short: "fun", long: "Funktionale Programmierung" };
+const fundc = { short: "fundc", long: "Funktionale Programmierung DC" };
 const sa = { short: "sa", long: "Software-Architektur" };
 const seiib = { short: "seiib", long: "Softwareentwicklung I (IB)" };
 const seiiib = { short: "seiiib", long: "Softwareentwicklung II (IB)" };
@@ -21,15 +22,16 @@ const base = {
     lectures: [],
   },
   currentSemester: {
-    short: "WS 20/21",
-    long: "Wintersemester 2020/21",
-    lectures: [algdati, vss],
+    short: "SS 21",
+    long: "Sommersemester 2021",
+    lectures: [fundc, vss],
   },
   allLectures: [
     algdati,
     algdatii,
     compiler,
     fun,
+    fundc,
     sa,
     seiib,
     seiiib,

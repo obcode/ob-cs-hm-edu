@@ -14,11 +14,11 @@
       <div
         class="col-xs-{cols} col-sm-{cols} col-md-{cols} col-lg-{cols} col-xl-{cols}
         d-flex justify-content-center">
-        <a href="lectures/{l.short}">
-          <button type="button" class="btn btn-outline-secondary btn-lg">
-            {l.long}
-          </button>
-        </a>
+        <!-- <a href="lectures/{l.short}"> -->
+        <button type="button" class="btn btn-outline-secondary btn-lg">
+          {l.long}
+        </button>
+        <!-- </a> -->
       </div>
     {/each}
   </div>
